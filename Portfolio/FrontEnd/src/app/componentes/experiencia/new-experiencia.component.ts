@@ -13,21 +13,22 @@ export class NewExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
 
-  constructor(private sExperiecia: SExperienciaService, private router: Router) { }
+  constructor(private sExperiencia: SExperienciaService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onCreate(): void{
-    const expe = new Experiencia();
-    this.sExperiecia.save(expe).subscribe(data => {
-      alert("Experiencia añadida");
-      this.router.navigate(['']);
-    }, err =>{
-      alert("Fallo");
-      this.router.navigate(['']);
-    })
+  onCreate(): void {
+    const expe = new Experiencia(this.nombreE, this.descripcionE);
+    this.sExperiencia.save(expe).subscribe(
+      data => {
+        alert("Experiencia añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
+      }
+    )
   }
 
 }
-//*this.nombreE, this.descripcionE

@@ -18,8 +18,9 @@ import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { interceptorProvider } from './servicios/interceptor-service';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
-
-
+import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
+import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 
 
 @NgModule({
@@ -36,7 +37,10 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    NewExperienciaComponent
+    NewExperienciaComponent,
+    EditEducacionComponent,
+    NewEducacionComponent,
+    EditExperienciaComponent
 
   ],
   imports: [
