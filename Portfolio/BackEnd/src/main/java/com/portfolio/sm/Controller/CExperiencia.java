@@ -20,13 +20,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "https://frontendsm.web.app")
 @RestController
-@RequestMapping("explab")
-@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/explab")
 public class CExperiencia {
     @Autowired
     SExperiencia sExperiencia;
     
+    @CrossOrigin(origins = "https://frontendsm.web.app")
     @GetMapping("/lista")
     public ResponseEntity<List<ExperienciaL>> list(){
        List<ExperienciaL> list = sExperiencia.list();

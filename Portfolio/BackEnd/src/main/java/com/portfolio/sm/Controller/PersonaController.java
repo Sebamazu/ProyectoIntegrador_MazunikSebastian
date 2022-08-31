@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "https://frontendsm.web.app")
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class PersonaController {
     @Autowired IPersonaService ipersonaService;
     
@@ -55,6 +55,7 @@ public class PersonaController {
         return persona;
     }
     
+    @CrossOrigin(origins = "https://frontendsm.web.app")
     @GetMapping("/personas/traer/perfil")
     public Persona findPersona(){
        return ipersonaService.findPersona((long)1);
