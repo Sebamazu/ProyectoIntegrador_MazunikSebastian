@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
   nombreUsuario!: string;
   password!: string;
   roles: string[] = [];
-  errMsj!: string;
-
+  errMsj: string;
+  mensaje: "No se pudo iniciar sesion"
 
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 
@@ -40,11 +40,11 @@ export class LoginComponent implements OnInit {
       this.roles = data.authorities;
       this.router.navigate([''])
     }, err =>{
+      alert("Usuario y contraseña incorrectos");
       this.isLogged = false;
       this.isLogginFail = true;
       this.errMsj = err.error.mensaje;
-      console.log(this.errMsj);
-      
+      console.log(this.errMsj);      
     })
   }
 
