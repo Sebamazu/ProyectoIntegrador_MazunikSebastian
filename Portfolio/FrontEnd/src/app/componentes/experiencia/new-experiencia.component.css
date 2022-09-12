@@ -9,7 +9,7 @@ img{
 
 @media (min-width: 576px){
     .container{
-        position: absolute;
+        
         
         border-radius: 100%;
         
@@ -19,7 +19,7 @@ img{
 }
 @media (max-width: 575px){
     .container{
-        position: absolute;
+        
         
         border-radius: 100%;
         
