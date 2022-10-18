@@ -1,6 +1,7 @@
+<div *ngIf="persona">
 <div class="row">
     <div class="col-xs-12 col-sm-2 col-ms-2 col-lg-2">
-        <img src="../../../assets/perfil.jpg" class="img-fluid" id="fotodeperfil">
+        <img src="{{persona.img}}" class="img-fluid" id="fotodeperfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-ms-2 col-lg-2">
         <p id="nombre">{{persona.nombre}} {{persona.apellido}}</p>
@@ -9,8 +10,15 @@
     <div class="col-xs-12 col-sm-8 col-ms-8 col-lg-8">
         <span>
             <h1>Acerca de mi</h1>
-            <p>Estudiante de Programacion en busqueda de crecimiento tanto laboral como personal en el area de desarrollo deseando ampliar mis conocimientos y experiencias. Gran facilidad para las relaciones interpersonales y rapido aprendizaje.
-            </p>
+            <p>{{persona.descripcion}}</p>
         </span>
     </div>
+</div>
+<div class="buton">
+<div class="col-lg-2">
+    <button type="button" class="btn btn-success" routerLink="/editacercade/1" *ngIf="isLogged">
+       Editar Persona
+    </button>
+</div>
+</div>
 </div>
